@@ -4,6 +4,8 @@ A Leiningen plugin to execute [SassC](https://github.com/sass/sassc). It simply
 builds an equivalent command line for SassC and executes it. `lein-sassc` has
 no dependencies other than Clojure 1.5+ and Java 1.7+.
 
+[![Clojars Project](http://clojars.org/pazustep/lein-sassc/latest-version.svg)](http://clojars.org/pazustep/lein-sassc)
+
 ## Installation
 
 You can install the plugin by adding `pazustep/lein-sassc` to your `project.clj`
