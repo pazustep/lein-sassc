@@ -11,8 +11,10 @@ no dependencies other than Clojure 1.5+ and Java 1.7+.
 You can install the plugin by adding `pazustep/lein-sassc` to your `project.clj`
 file in the `:plugins` section, like this:
 
-    (defproject my-project "1.2.3"
-      :plugins [[pazustep/lein-sassc "0.1.0"]])
+```clojure
+(defproject my-project "1.2.3"
+  :plugins [[pazustep/lein-sassc "0.1.0"]])
+```
 
 ## Configuration
 
@@ -21,18 +23,20 @@ need to run `sassc` once, or a vector of maps if you need multiple runs.
 
 Single run example, including all supported options:
 
-    (defproject my-project "1.2.3"
-      :plugins [[pazustep/lein-sassc "0.1.0"]]
-      :sass {
-        :src "src/scss/main.scss"
-        :output-to "src/stylesheests/main.css"
-        :executable "/usr/local/bin/sassc"
-        :source-paths ["src/scss"]
-        :compressed true
-        :line-numbers true
-        :source-map true
-        :omit-map-comment true
-        :precision 5})
+```clojure
+(defproject my-project "1.2.3"
+  :plugins [[pazustep/lein-sassc "0.1.0"]]
+  :sass {
+    :src "src/scss/main.scss"
+    :output-to "src/stylesheests/main.css"
+    :executable "/usr/local/bin/sassc"
+    :source-paths ["src/scss"]
+    :compressed true
+    :line-numbers true
+    :source-map true
+    :omit-map-comment true
+    :precision 5})
+```
 
 `:src` and `:output-to` are required; all other keys are optional. Each key
 maps directly to a `sassc` command line option, as follows:
@@ -51,7 +55,9 @@ it will be run simply `sassc`.
 
 Once the plugin is installed and configured, you can run it with:
 
-    $ lein sassc
+```sh
+$ lein sassc
+```
 
 That's it. No options, no hooks, nothing.
 
