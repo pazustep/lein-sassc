@@ -1,10 +1,10 @@
 # lein-sassc
 
+[![Clojars Project](http://clojars.org/pazustep/lein-sassc/latest-version.svg)](http://clojars.org/pazustep/lein-sassc)
+
 A Leiningen plugin to execute [SassC](https://github.com/sass/sassc). It simply
 builds an equivalent command line for SassC and executes it. `lein-sassc` has
 no dependencies other than Clojure 1.5+ and Java 1.7+.
-
-[![Clojars Project](http://clojars.org/pazustep/lein-sassc/latest-version.svg)](http://clojars.org/pazustep/lein-sassc)
 
 ## Installation
 
@@ -37,12 +37,12 @@ Single run example, including all supported options:
 `:src` and `:output-to` are required; all other keys are optional. Each key
 maps directly to a `sassc` command line option, as follows:
 
-- `:source-paths ["path1 "path2" ...]` adds `--load-path path1 --load-path path2 ...`;
-- `:compressed true` adds `--style compressed`;
-- `:line-numbers true` adds `--line-numbers`;
-- `:source-map true` adds `--sourcemap`;
-- `:omit-map-comment true` adds `--omit-map-comment`;
-- `:precision n` adds `--precision n`.
+- `:source-paths ["path1 "path2" ...]` adds `--load-path path1 --load-path path2 ...`
+- `:compressed true` adds `--style compressed`
+- `:line-numbers true` adds `--line-numbers`
+- `:source-map true` adds `--sourcemap`
+- `:omit-map-comment true` adds `--omit-map-comment`
+- `:precision n` adds `--precision n`
 
 The SassC executable can be set explicitly using the `:executable` key. If left out,
 it will be run simply `sassc`.
